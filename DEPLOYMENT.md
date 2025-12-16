@@ -1,4 +1,4 @@
-# Mini-Meco Deployment Guide
+# Happy Go Lucky (HGL) Deployment Guide
 
 This guide covers production deployment using Docker with automatic HTTPS certificate management via Caddy.
 
@@ -76,7 +76,7 @@ dig your-domain.com
 1. **Clone the repository on your server:**
    ```bash
    git clone <repository-url>
-   cd mini-meco
+   cd happy-go-lucky
    ```
 
 2. **Create production environment file:**

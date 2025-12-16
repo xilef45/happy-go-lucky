@@ -1,16 +1,16 @@
-# Mini-Meco
+# Happy Go Lucky
 
-Mini-Meco is simple web-based application to support agile software development. It is also used as an example application for teaching.
+Happy Go Lucky (HGL) is a web-based application to support agile software development. It is also used as an example application for teaching.
 
-Mini-Meco allows for the creation of courses and projects within courses as well as self-registration of users (students) for projects.
+HGL allows for the creation of courses and projects within courses as well as self-registration of users (students) for projects.
 
-Functionality is provided as panels (the visual part of components). The three main out-of-the-box components are
+The architecture is (supposed to be) modular. Functionality is provided as panels (the visual part of components). The three main out-of-the-box modules are
 
-(1) happiness index,
-(2) standup emails, and
-(3) code contribution graph.
+1. happiness index,
+2. standup emails, and
+3. code contribution graph.
 
-Mini-Meco is developed as part of teaching software engineering at the Professorship for Open-Source Software, Friedrich-Alexander-Universität Erlangen-Nürnberg.
+HGL is developed as part of teaching software engineering at the Professorship for Open-Source Software at FAU Erlangen.
 
 ## Getting Started
 
