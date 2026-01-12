@@ -55,7 +55,7 @@ export class TermManager implements IManager {
 
         // Write Root-Object Term
         const writer = new DatabaseWriter(this.db);
-        writer.writeRoot(term);
+        await writer.writeRoot(term);
 
         return term;
       }

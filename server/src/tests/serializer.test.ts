@@ -52,7 +52,7 @@ describe('Basic serializer read/write test', async () => {
     const p: CourseProject = await dbsf.create("CourseProject") as CourseProject;
     p.setCourse(c);
     p.setName("proj");
-    (new DatabaseWriter(db)).writeRoot(p);
+    await (new DatabaseWriter(db)).writeRoot(p);
     const res = db.get(`SELECT * FROM projects WHERE projectName = "proj"`);
     let p3 = await (new DatabaseResultSetReader(res, db).readRoot<CourseProject>(CourseProject)) as CourseProject;
     console.log(JSON.stringify(p3));

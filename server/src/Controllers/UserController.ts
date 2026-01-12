@@ -74,9 +74,9 @@ export class UserController implements IAppController {
     }
 
     if (status == "suspended") {
-      this.sendSuspendedEmail(userEmail);
+      await this.sendSuspendedEmail(userEmail);
     } else if (status == "removed") {
-      this.sendRemovedEmail(userEmail);
+      await this.sendRemovedEmail(userEmail);
     }
 
     try {

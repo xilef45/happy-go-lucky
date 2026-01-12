@@ -29,8 +29,8 @@ describe("CourseSchedule", () => {
         expected.setEndDate(new Date(2022, 1, 1));
         submission1.setSubmissionDate(new Date(2022, 0, 1));
         expected.setSubmissionDates([submission1]);
-        
-        (new DatabaseWriter(db)).writeRoot(expected);
+
+        await (new DatabaseWriter(db)).writeRoot(expected);
 
         const actual = await oh.getCourseSchedule(1, db);
         expect(actual).toEqual(expected);

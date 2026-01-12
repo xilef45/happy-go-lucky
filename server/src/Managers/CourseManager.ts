@@ -144,8 +144,8 @@ export class CourseManager implements IManager {
 
       // Write to database
       const writer = new DatabaseWriter(this.db);
-      writer.writeRoot(proj);
-      writer.writeRoot(course);
+      await writer.writeRoot(proj);
+      await writer.writeRoot(course);
 
       return proj;
     } catch (error) {
@@ -207,7 +207,7 @@ export class CourseManager implements IManager {
       }
 
       const writer = new DatabaseWriter(this.db);
-      writer.writeRoot(project);
+      await writer.writeRoot(project);
 
       return project;
     } catch (error) {
@@ -336,7 +336,7 @@ export class CourseManager implements IManager {
 
       // Write to database
       const writer = new DatabaseWriter(this.db);
-      writer.writeRoot(schedule);
+      await writer.writeRoot(schedule);
 
       return schedule;
     } catch (error) {

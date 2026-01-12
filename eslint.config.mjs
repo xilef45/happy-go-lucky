@@ -55,7 +55,7 @@ export default [
         languageOptions: {
             parser: typescriptParser,
             parserOptions: {
-                tsconfigRootDir: import.meta.dirname, 
+                tsconfigRootDir: import.meta.dirname,
                 sourceType: "module",
                 ecmaVersion: 2020,
                 project: './server/tsconfig.json',
@@ -69,6 +69,8 @@ export default [
         },
         rules: {
             ...typescriptPlugin.configs.recommended.rules,
+            '@typescript-eslint/no-floating-promises': 'error',
+            '@typescript-eslint/no-misused-promises': 'error',
         },
     },
 
