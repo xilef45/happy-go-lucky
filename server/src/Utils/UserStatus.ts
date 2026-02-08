@@ -24,7 +24,7 @@ export class UserStatus {
     }
 
     getStatusString(): string {
-        return this.status.toString();
+        return this.status;
     }
 
     getStatusEnum(): UserStatusEnum {
