@@ -23,7 +23,11 @@ export class UserStatus {
         this.status = initialStatus;
     }
 
-    getStatusString(): UserStatusEnum {
+    getStatusString(): string {
+        return this.status.toString();
+    }
+
+    getStatusEnum(): UserStatusEnum {
         return this.status;
     }
 

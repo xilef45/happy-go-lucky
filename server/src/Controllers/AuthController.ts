@@ -152,7 +152,7 @@ export class AuthController implements IAppController {
         }
       }
 
-      let st: string = user.getStatus().getStatusString();
+      let st: string = user.getStatus();
       let userStatus: UserStatus = new UserStatus(st as UserStatusEnum);
       if (userStatus.getStatusString() == UserStatusEnum.unconfirmed) {
         res
@@ -353,7 +353,7 @@ export class AuthController implements IAppController {
         res.status(400).json({ message: "User not found" });
         return;
       }
-      let st: string = user.getStatus().getStatusString();
+      let st: string = user.getStatus();
       let userStatus: UserStatus = new UserStatus(st as UserStatusEnum);
       if (userStatus.getStatusString() != UserStatusEnum.unconfirmed) {
         res

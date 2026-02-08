@@ -90,8 +90,8 @@ export class User extends Visitor implements Serializable {
     return this.email;
   }
 
-  public getStatus(): UserStatus {
-    return this.status;
+  public getStatus(): string {
+    return this.status.getStatusString();
   }
 
   public getRole(): string {
