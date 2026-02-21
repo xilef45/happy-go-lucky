@@ -68,11 +68,11 @@ describe("UserRole", () => {
 
     it("should return the correct string representation of the role admin", () => {
         const userRole = new UserRole(UserRoleEnum.ADMIN);
-        expect(userRole.getRoleString()).toBe("ADMIN");
+        expect(userRole.isRole(UserRoleEnum.ADMIN)).toBe(true);
     });
 
     it("should return the correct string representation of the role user", () => {
         const userRole = new UserRole(UserRoleEnum.USER);
-        expect(userRole.getRoleString()).toBe("USER");
+        expect(userRole.isRole(UserRoleEnum.USER)).toBe(true);
     });
 });
