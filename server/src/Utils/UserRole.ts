@@ -13,14 +13,14 @@ export class UserRole {
     };
 
     constructor(initialRole: UserRoleEnum = UserRoleEnum.USER) {
-        if (!Object.values(UserRoleEnum).includes(initialRole)) {
+        if initialRole in UserRoleEnaum) {
             throw new Error(`Invalid initial role: ${initialRole}`);
         }
         this.role = initialRole;
     }
 
-    getRoleEnum(): UserRoleEnum {
-        return this.role;
+    getRoleObject(): UserRole {
+        return this;
     }
 
     getRoleString(): string {
