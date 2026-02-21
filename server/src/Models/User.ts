@@ -98,6 +98,10 @@ export class User extends Visitor implements Serializable {
     return this.role.getRoleObject();
   }
 
+  public getRoleEnaum(): UserRoleEnaum {
+     return this.role.getRoleEnum();
+  }
+
   public getPassword(): string | null{
     return this.password;
   }
