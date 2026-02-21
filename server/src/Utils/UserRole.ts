@@ -13,7 +13,7 @@ export class UserRole {
     };
 
     constructor(initialRole: UserRoleEnum = UserRoleEnum.USER) {
-        if initialRole in UserRoleEnaum) {
+        if (initialRole in UserRoleEnaum) {
             throw new Error(`Invalid initial role: ${initialRole}`);
         }
         this.role = initialRole;
